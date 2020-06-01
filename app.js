@@ -5,19 +5,13 @@ const mongoose = require('mongoose');
 
 const graphqlSchema = require('./graphql/schema');
 const graphqlResolvers = require('./graphql/resolvers');
+const isAuth = require('./middleware/is-auth');
 const log = console.log;
 const PORT = process.env.PORT;
-const app = express();
 
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', req.headers.origin);
-    res.header(
-      'Access-Control-Allow-Headers',
-      'Origin, X-Requested-With, Content-Type, Accept, Authorization',
-    );
-    next();
-  });
+const app = express();
 app.use(bodyParser.json());
+app.use(isAuth);
 
 app.use('/api',graphqlHttp({
     schema: graphqlSchema,
