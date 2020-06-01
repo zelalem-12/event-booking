@@ -1,0 +1,8 @@
+{
+   "env": {
+        "MONGO_CLOUD_USER": "zelalem-12",
+        "MONGO_CLOUD_PASSWORD": "zeleStrong%4012",
+        "MONGO_CLOUD_DATABASE": "event-booking",
+        "PORT": 8000
+    }
+}
