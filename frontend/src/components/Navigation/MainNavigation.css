@@ -19,7 +19,10 @@
     margin: 0;
     font-size: 1.5rem;
   }
-  
+  .main-navigation__items a,
+.main-navigation__items button {
+  cursor: pointer;
+}
   .main-navigation__items {
     margin-left: 1.5rem;
   }
@@ -43,5 +46,5 @@
   .main-navigation__items a:hover,
   .main-navigation__items a:active,
   .main-navigation__items a.active {
-      color: #0c7f9c;
+      color: #a0c8fd;
   }
